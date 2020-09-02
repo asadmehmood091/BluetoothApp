@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="signalstrengthmeter.MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#4AAAF6"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:titleTextColor="#fff"
+        app:layout_constraintLeft_toRightOf="@id/leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/topmostgl"
+        app:layout_constraintBottom_toTopOf="@+id/topmost2gl">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftmostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topmostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.00" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topmost3gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topmost2gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightmostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottommostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center1gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center2gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row1bottomgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row2topgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row2bottomgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row3topgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row3bottomgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/row1bottomgl"
+        app:layout_constraintLeft_toRightOf="@id/leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/center1gl"
+        app:layout_constraintTop_toBottomOf="@id/topmost3gl">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hometopgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hometitlebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homedevicenamebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homeprogress_barbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homeconnectedbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homeleftgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/homebottomgl"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homestartgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/homebottomgl"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homesecondgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/homebottomgl"
+                app:layout_constraintGuide_percent="0.12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homeendgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/homebottomgl"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/homerightgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/homebottomgl"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/home"
+                app:layout_constraintBottom_toTopOf="@id/homebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/homeleftgl"
+                app:layout_constraintRight_toRightOf="@id/homerightgl"
+                app:layout_constraintTop_toBottomOf="@id/hometopgl" />
+
+            <TextView
+                android:id="@+id/hometitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home"
+                android:text="HOME"
+                android:textColor="#F6A2A2"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/hometitlebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/homeleftgl"
+                app:layout_constraintRight_toRightOf="@id/homerightgl"
+                app:layout_constraintTop_toTopOf="@id/homebottomgl" />
+
+            <TextView
+                android:id="@+id/homedeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hometitle"
+                android:text="home"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/homedevicenamebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/homeleftgl"
+                app:layout_constraintRight_toRightOf="@id/homerightgl"
+                app:layout_constraintTop_toTopOf="@id/hometitlebottomgl" />
+
+            <ProgressBar
+                android:id="@+id/homeprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/progress_grad_bg"
+                android:max="-30"
+                android:min="-90"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_grad_bg"
+                app:layout_constraintBottom_toTopOf="@id/homeprogress_barbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/homesecondgl"
+                app:layout_constraintRight_toRightOf="@id/homeendgl"
+                app:layout_constraintTop_toTopOf="@id/homedevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/homepercent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/homeprogress_barbottomgl"
+                app:layout_constraintLeft_toRightOf="@id/homeprogress"
+                app:layout_constraintRight_toLeftOf="@id/homeendgl"
+                app:layout_constraintTop_toBottomOf="@id/homedevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/homesignal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="signal"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/homeprogress"
+                app:layout_constraintLeft_toRightOf="@id/homesecondgl"
+                app:layout_constraintRight_toLeftOf="@id/homerightgl"
+                app:layout_constraintTop_toBottomOf="@id/homedevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/homeconnected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="NotConnected"
+                android:textColor="@color/red"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toTopOf="@id/homeconnectedbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/homerightgl"
+                app:layout_constraintRight_toLeftOf="@id/homeendgl"
+                app:layout_constraintTop_toBottomOf="@id/homeprogress_barbottomgl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/row1bottomgl"
+        app:layout_constraintLeft_toRightOf="@id/center2gl"
+        app:layout_constraintRight_toRightOf="@id/rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/topmost3gl">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cartopgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cartitlebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cardevicenamebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carprogress_barbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carconnectedbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carleftgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/carbottomgl"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carstartgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/carbottomgl"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carsecondgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/carbottomgl"
+                app:layout_constraintGuide_percent="0.12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carendgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/carbottomgl"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/carrightgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/carbottomgl"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <ImageView
+                android:id="@+id/car"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/car"
+                app:layout_constraintBottom_toTopOf="@id/carbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/carleftgl"
+                app:layout_constraintRight_toRightOf="@id/carrightgl"
+                app:layout_constraintTop_toBottomOf="@id/cartopgl" />
+
+            <TextView
+                android:id="@+id/cartitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/car"
+                android:text="CAR"
+                android:textColor="#F6A2A2"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/cartitlebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/carleftgl"
+                app:layout_constraintRight_toRightOf="@id/carrightgl"
+                app:layout_constraintTop_toTopOf="@id/carbottomgl" />
+
+            <TextView
+                android:id="@+id/cardeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cartitle"
+                android:text="car"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/cardevicenamebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/carleftgl"
+                app:layout_constraintRight_toRightOf="@id/carrightgl"
+                app:layout_constraintTop_toTopOf="@id/cartitlebottomgl" />
+
+            <ProgressBar
+                android:id="@+id/carprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/progress_grad_bg"
+                android:max="-30"
+                android:min="-90"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_grad_bg"
+                app:layout_constraintBottom_toTopOf="@id/carprogress_barbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/carsecondgl"
+                app:layout_constraintRight_toRightOf="@id/carendgl"
+                app:layout_constraintTop_toTopOf="@id/cardevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/carpercent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/carprogress_barbottomgl"
+                app:layout_constraintLeft_toRightOf="@id/carprogress"
+                app:layout_constraintRight_toLeftOf="@id/carendgl"
+                app:layout_constraintTop_toBottomOf="@id/cardevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/carsignal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="signal"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/carprogress"
+                app:layout_constraintLeft_toRightOf="@id/carsecondgl"
+                app:layout_constraintRight_toLeftOf="@id/carrightgl"
+                app:layout_constraintTop_toBottomOf="@id/cardevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/carconnected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="NotConnected"
+                android:textColor="@color/red"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toTopOf="@id/carconnectedbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/carrightgl"
+                app:layout_constraintRight_toLeftOf="@id/carendgl"
+                app:layout_constraintTop_toBottomOf="@id/carprogress_barbottomgl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/row2bottomgl"
+        app:layout_constraintLeft_toRightOf="@id/leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/center1gl"
+        app:layout_constraintTop_toBottomOf="@id/row2topgl">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonetopgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonetitlebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonedevicenamebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphoneprogress_barbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphoneconnectedbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphoneleftgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/earphonebottomgl"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonestartgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/earphonebottomgl"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonesecondgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/earphonebottomgl"
+                app:layout_constraintGuide_percent="0.12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphoneendgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/earphonebottomgl"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/earphonerightgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/earphonebottomgl"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <ImageView
+                android:id="@+id/earphone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/earphone"
+                app:layout_constraintBottom_toTopOf="@id/earphonebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/earphoneleftgl"
+                app:layout_constraintRight_toRightOf="@id/earphonerightgl"
+                app:layout_constraintTop_toBottomOf="@id/earphonetopgl" />
+
+            <TextView
+                android:id="@+id/earphonetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/earphone"
+                android:text="EARPHONE"
+                android:textColor="#F6A2A2"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/earphonetitlebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/earphoneleftgl"
+                app:layout_constraintRight_toRightOf="@id/earphonerightgl"
+                app:layout_constraintTop_toTopOf="@id/earphonebottomgl" />
+
+            <TextView
+                android:id="@+id/earphonedeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/earphonetitle"
+                android:text="earphone"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/earphonedevicenamebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/earphoneleftgl"
+                app:layout_constraintRight_toRightOf="@id/earphonerightgl"
+                app:layout_constraintTop_toTopOf="@id/earphonetitlebottomgl" />
+
+            <ProgressBar
+                android:id="@+id/earphoneprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/progress_grad_bg"
+                android:max="-30"
+                android:min="-90"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_grad_bg"
+                app:layout_constraintBottom_toTopOf="@id/earphoneprogress_barbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/earphonesecondgl"
+                app:layout_constraintRight_toRightOf="@id/earphoneendgl"
+                app:layout_constraintTop_toTopOf="@id/earphonedevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/earphonepercent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/earphoneprogress_barbottomgl"
+                app:layout_constraintLeft_toRightOf="@id/earphoneprogress"
+                app:layout_constraintRight_toLeftOf="@id/earphoneendgl"
+                app:layout_constraintTop_toBottomOf="@id/earphonedevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/earphonesignal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="signal"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/earphoneprogress"
+                app:layout_constraintLeft_toRightOf="@id/earphonesecondgl"
+                app:layout_constraintRight_toLeftOf="@id/earphonerightgl"
+                app:layout_constraintTop_toBottomOf="@id/earphonedevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/earphoneconnected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="NotConnected"
+                android:textColor="@color/red"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toTopOf="@id/earphoneconnectedbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/earphonerightgl"
+                app:layout_constraintRight_toLeftOf="@id/earphoneendgl"
+                app:layout_constraintTop_toBottomOf="@id/earphoneprogress_barbottomgl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/row2bottomgl"
+        app:layout_constraintLeft_toRightOf="@id/center2gl"
+        app:layout_constraintRight_toRightOf="@id/rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/row2topgl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/icontopgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/iconbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/titlebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/devicenamebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/progress_barbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/connectedbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/iconleftgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/iconbottomgl"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/iconstartgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/iconbottomgl"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/iconsecondgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/iconbottomgl"
+                app:layout_constraintGuide_percent="0.12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/iconendgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/iconbottomgl"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/iconrightgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/iconbottomgl"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/desktop"
+                app:layout_constraintBottom_toTopOf="@id/iconbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/iconleftgl"
+                app:layout_constraintRight_toRightOf="@id/iconrightgl"
+                app:layout_constraintTop_toBottomOf="@id/icontopgl" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon"
+                android:text="OFFICE"
+                android:textColor="#F6A2A2"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/titlebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/iconleftgl"
+                app:layout_constraintRight_toRightOf="@id/iconrightgl"
+                app:layout_constraintTop_toTopOf="@id/iconbottomgl" />
+
+            <TextView
+                android:id="@+id/deviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:text="office"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/devicenamebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/iconleftgl"
+                app:layout_constraintRight_toRightOf="@id/iconrightgl"
+                app:layout_constraintTop_toTopOf="@id/titlebottomgl" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/progress_grad_bg"
+                android:max="-30"
+                android:min="-90"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_grad_bg"
+                app:layout_constraintBottom_toTopOf="@id/progress_barbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/iconsecondgl"
+                app:layout_constraintRight_toRightOf="@id/iconendgl"
+                app:layout_constraintTop_toTopOf="@id/devicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/percent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/progress_barbottomgl"
+                app:layout_constraintLeft_toRightOf="@id/progress"
+                app:layout_constraintRight_toLeftOf="@id/iconendgl"
+                app:layout_constraintTop_toBottomOf="@id/devicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/signal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="signal"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/progress"
+                app:layout_constraintLeft_toRightOf="@id/iconsecondgl"
+                app:layout_constraintRight_toLeftOf="@id/iconrightgl"
+                app:layout_constraintTop_toBottomOf="@id/devicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/connected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="NotConnected"
+                android:textColor="@color/red"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toTopOf="@id/connectedbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/iconrightgl"
+                app:layout_constraintRight_toLeftOf="@id/iconendgl"
+                app:layout_constraintTop_toBottomOf="@id/progress_barbottomgl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@color/gray"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/row3bottomgl"
+        app:layout_constraintLeft_toRightOf="@id/leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/center1gl"
+        app:layout_constraintTop_toBottomOf="@id/row3topgl">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customtopgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custombottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.38" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customtitlebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customdevicenamebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customprogress_barbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customconnectedbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customleftgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custombottomgl"
+                app:layout_constraintGuide_percent="0.37" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customstartgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custombottomgl"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customsecondgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custombottomgl"
+                app:layout_constraintGuide_percent="0.12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customendgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custombottomgl"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/customrightgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custombottomgl"
+                app:layout_constraintGuide_percent="0.68" />
+
+            <ImageView
+                android:id="@+id/custom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@id/custombottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/customleftgl"
+                app:layout_constraintRight_toRightOf="@id/customrightgl"
+                app:layout_constraintTop_toBottomOf="@id/customtopgl" />
+
+            <TextView
+                android:id="@+id/customtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/custom"
+                android:text="ADD NEW"
+                android:textColor="@color/gray"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/customtitlebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/customleftgl"
+                app:layout_constraintRight_toRightOf="@id/customrightgl"
+                app:layout_constraintTop_toTopOf="@id/custombottomgl" />
+
+            <TextView
+                android:id="@+id/customdeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customtitle"
+                android:text="Device Name"
+                android:textColor="@color/gray"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/customdevicenamebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/customleftgl"
+                app:layout_constraintRight_toRightOf="@id/customrightgl"
+                app:layout_constraintTop_toTopOf="@id/customtitlebottomgl" />
+
+            <ProgressBar
+                android:id="@+id/customprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/progress_grad_bg_gray"
+                android:max="-30"
+                android:min="-90"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_grad_bg_gray"
+                app:layout_constraintBottom_toTopOf="@id/customprogress_barbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/customsecondgl"
+                app:layout_constraintRight_toRightOf="@id/customendgl"
+                app:layout_constraintTop_toTopOf="@id/customdevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/custompercent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/customprogress_barbottomgl"
+                app:layout_constraintLeft_toRightOf="@id/customprogress"
+                app:layout_constraintRight_toLeftOf="@id/customendgl"
+                app:layout_constraintTop_toBottomOf="@id/customdevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/customsignal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="signal"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/customprogress"
+                app:layout_constraintLeft_toRightOf="@id/customsecondgl"
+                app:layout_constraintRight_toLeftOf="@id/customrightgl"
+                app:layout_constraintTop_toBottomOf="@id/customdevicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/customconnected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="NotConnected"
+                android:textColor="@color/red"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toTopOf="@id/customconnectedbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/customrightgl"
+                app:layout_constraintRight_toLeftOf="@id/customendgl"
+                app:layout_constraintTop_toBottomOf="@id/customprogress_barbottomgl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@color/gray"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/row3bottomgl"
+        app:layout_constraintLeft_toRightOf="@id/center2gl"
+        app:layout_constraintRight_toRightOf="@id/rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/row3topgl">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2topgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2bottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.38" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2titlebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.57" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2devicenamebottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2progress_barbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.87" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2connectedbottomgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2leftgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custom2bottomgl"
+                app:layout_constraintGuide_percent="0.37" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2startgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custom2bottomgl"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2secondgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custom2bottomgl"
+                app:layout_constraintGuide_percent="0.12" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2endgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custom2bottomgl"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/custom2rightgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/custom2bottomgl"
+                app:layout_constraintGuide_percent="0.68" />
+
+            <ImageView
+                android:id="@+id/custom2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@id/custom2bottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/custom2leftgl"
+                app:layout_constraintRight_toRightOf="@id/custom2rightgl"
+                app:layout_constraintTop_toBottomOf="@id/custom2topgl" />
+
+            <TextView
+                android:id="@+id/custom2title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/custom2"
+                android:text="ADD NEW"
+                android:textColor="@color/gray"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/custom2titlebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/custom2leftgl"
+                app:layout_constraintRight_toRightOf="@id/custom2rightgl"
+                app:layout_constraintTop_toTopOf="@id/custom2bottomgl" />
+
+            <TextView
+                android:id="@+id/custom2deviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/custom2title"
+                android:text="Device Name"
+                android:textColor="@color/gray"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/custom2devicenamebottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/custom2leftgl"
+                app:layout_constraintRight_toRightOf="@id/custom2rightgl"
+                app:layout_constraintTop_toTopOf="@id/custom2titlebottomgl" />
+
+            <ProgressBar
+                android:id="@+id/custom2progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/progress_grad_bg_gray"
+                android:max="-30"
+                android:min="-90"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_grad_bg_gray"
+                app:layout_constraintBottom_toTopOf="@id/custom2progress_barbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/custom2secondgl"
+                app:layout_constraintRight_toRightOf="@id/custom2endgl"
+                app:layout_constraintTop_toTopOf="@id/custom2devicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/custom2percent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="100%"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/custom2progress_barbottomgl"
+                app:layout_constraintLeft_toRightOf="@id/custom2progress"
+                app:layout_constraintRight_toLeftOf="@id/custom2endgl"
+                app:layout_constraintTop_toBottomOf="@id/custom2devicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/custom2signal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="signal"
+                android:textColor="#403B40"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/custom2progress"
+                app:layout_constraintLeft_toRightOf="@id/custom2secondgl"
+                app:layout_constraintRight_toLeftOf="@id/custom2rightgl"
+                app:layout_constraintTop_toBottomOf="@id/custom2devicenamebottomgl" />
+
+            <TextView
+                android:id="@+id/custom2connected"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="NotConnected"
+                android:textColor="@color/red"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toTopOf="@id/custom2connectedbottomgl"
+                app:layout_constraintLeft_toLeftOf="@id/custom2rightgl"
+                app:layout_constraintRight_toLeftOf="@id/custom2endgl"
+                app:layout_constraintTop_toBottomOf="@id/custom2progress_barbottomgl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

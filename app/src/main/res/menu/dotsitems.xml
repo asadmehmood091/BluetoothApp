@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Share"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_ourApps"
+        android:icon="@drawable/ic_apps_black_24dp"
+        android:title="Our Apps"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="Help"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/ic_error_black_24dp"
+        android:title="About"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/action_privacy"
+        android:title="Privacy Policy"
+        app:showAsAction="never" />
+
+</menu>
