@@ -1,4 +1,4 @@
-package dedy.bluetooth_signal_strength_measure_meter;
+package signalstrengthmeter;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

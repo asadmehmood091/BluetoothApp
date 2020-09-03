@@ -1,9 +1,6 @@
 package signalstrengthmeter;
 
 import android.Manifest;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -15,17 +12,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,8 +20,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -52,11 +46,9 @@ public class ListActivity extends AppCompatActivity {
     Snackbar snackbar;
     LinearLayoutManager mLayoutManager;
     ArrayList<String> mMacAddress = new ArrayList<>();
-    boolean isScanning = true;
     private AdView mAdView;
     TextView scanning ;
     ImageView bluetoothicon;
-    FloatingActionButton floatingActionButton;
     Animation blinking;
 
     @Override
@@ -64,7 +56,7 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar =  findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         ActivityCompat.requestPermissions(this,
@@ -92,7 +84,6 @@ public class ListActivity extends AppCompatActivity {
         recyclerview = findViewById(R.id.recyclerview);
         scanning = findViewById(R.id.scanning);
         bluetoothicon = findViewById(R.id.bluetoothIcon);
-        floatingActionButton  = findViewById(R.id.floatingbtn);
         blinking = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.blinking);
         bluetoothicon.startAnimation(blinking);
@@ -102,7 +93,6 @@ public class ListActivity extends AppCompatActivity {
         { startListening();
         }else showSnakebar();
     }
-
 
 
     public void startListening() {
@@ -214,10 +204,6 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),help.class));
                 break;
             }
-            case R.id.action_about: {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                break;
-            }
             case R.id.action_privacy: {
                 break;
             }
@@ -236,27 +222,6 @@ public class ListActivity extends AppCompatActivity {
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
-    }
-
-    public void PlayPause(View view) {
-
-        if (isScanning) {
-            floatingActionButton.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-            isScanning = false;
-            clearrecyclerview();
-            scanning.setText("Scanning Stoped.");
-            scanning.setTextColor(0xFFE82323);
-            bluetoothicon.clearAnimation();
-            BTAdapter.cancelDiscovery();
-        } else {
-            floatingActionButton.setImageResource(R.drawable.ic_pause_black_24dp);
-            isScanning = true;
-            startListening();
-            scanning.setText("Scanning started...");
-            scanning.setTextColor(0xFF4CAF50);
-            BTAdapter.startDiscovery();
-            bluetoothicon.startAnimation(blinking);
-        }
     }
 
     void loadAds() {

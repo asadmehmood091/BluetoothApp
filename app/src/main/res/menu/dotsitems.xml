@@ -16,11 +16,7 @@
         android:icon="@drawable/ic_help_black_24dp"
         android:title="Help"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_about"
-        android:icon="@drawable/ic_error_black_24dp"
-        android:title="About"
-        app:showAsAction="collapseActionView" />
+
     <item
         android:id="@+id/action_privacy"
         android:title="Privacy Policy"

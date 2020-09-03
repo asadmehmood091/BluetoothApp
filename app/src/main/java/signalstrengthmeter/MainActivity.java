@@ -1,22 +1,26 @@
 package signalstrengthmeter;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 public class MainActivity extends AppCompatActivity {
 
     private String TAG = MainActivity.class.getSimpleName();
     InterstitialAd mInterstitialAd;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 showInterstitial();
             }
         });
+
+        loadAds();
     }
 
     private void showInterstitial() {
@@ -67,10 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),help.class));
                 break;
             }
-            case R.id.action_about: {
-                startActivity(new Intent(getApplicationContext(), ListActivity.class));
-                break;
-            }
             case R.id.action_privacy: {
                 break;
             }
@@ -90,4 +92,55 @@ public class MainActivity extends AppCompatActivity {
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
     }
+
+    public void AddNew(View view){
+        startActivity(new Intent(getApplicationContext(),ListActivity.class));
+    }
+
+    public void Home_CardView(View view) {
+        Toast.makeText(getApplicationContext(),"Home Connection",Toast.LENGTH_SHORT).show();
+    }
+
+    void loadAds() {
+        mAdView =  findViewById(R.id.adMainView);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                // Check the LogCat to get your test device ID
+                .addTestDevice("C04B1BFFB0774708339BC273F8A43708")
+                .build();
+
+//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//            }
+//        });
+//        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+    }
+
+//    protected void onResume() {
+//
+//        super.onResume();
+//        super.onResume();
+//        if (mAdView != null) {
+//            mAdView.resume();
+//        }
+//    }
+//
+//    @Override
+//    public void onPause() {
+//        if (mAdView != null) {
+//            mAdView.pause();
+//        }
+//        super.onPause();
+//    }
+//
+//    @Override
+//    public void onDestroy() {
+//        if (mAdView != null) {
+//            mAdView.destroy();
+//        }
+//        super.onDestroy();
+//    }
 }
