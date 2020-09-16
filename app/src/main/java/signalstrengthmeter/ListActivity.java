@@ -24,7 +24,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -44,10 +43,9 @@ public class ListActivity extends AppCompatActivity {
     ArrayList<DataModel> itemslist = new ArrayList<>();
     DataModel dataModel;
     Snackbar snackbar;
-    LinearLayoutManager mLayoutManager;
     ArrayList<String> mMacAddress = new ArrayList<>();
     private AdView mAdView;
-    TextView scanning ;
+    TextView scanning;
     ImageView bluetoothicon;
     Animation blinking;
 
@@ -56,7 +54,7 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        Toolbar myToolbar =  findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         ActivityCompat.requestPermissions(this,
@@ -64,7 +62,7 @@ public class ListActivity extends AppCompatActivity {
                 MY_PERMISSIONS_REQUEST_LOCATION);
         Permissions();
 
-        if(checkLocationPermission()){
+        if (checkLocationPermission()) {
 //            new AlertDialog.Builder(ListActivity.this)
 //                    .setTitle("Location permission")
 //                    .setMessage("in order to use Bluetooth meter app device must allow location permissions.")
@@ -81,7 +79,7 @@ public class ListActivity extends AppCompatActivity {
 //                    .show();
         }
 
-        recyclerview = findViewById(R.id.recyclerview);
+      //  recyclerview = findViewById(R.id.recyclerview);
         scanning = findViewById(R.id.scanning);
         bluetoothicon = findViewById(R.id.bluetoothIcon);
         blinking = AnimationUtils.loadAnimation(getApplicationContext(),
@@ -89,9 +87,10 @@ public class ListActivity extends AppCompatActivity {
         bluetoothicon.startAnimation(blinking);
 
         loadAds();
-        if(BTAdapter.enable())
-        { startListening();
-        }else showSnakebar();
+        if (BTAdapter.enable()) {
+            startListening();
+        } else showSnakebar();
+
     }
 
 
@@ -100,7 +99,7 @@ public class ListActivity extends AppCompatActivity {
 //        Intent i = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
 //        i.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 240);
 //        startActivityForResult(i,1);
-
+//
 //        if (BTAdapter.getScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
 //            Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
 //            discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
@@ -115,11 +114,11 @@ public class ListActivity extends AppCompatActivity {
         BTAdapter.startDiscovery();
 
 //        registerReceiver(receiver,new IntentFilter(BluetoothDevice.ACTION_FOUND));
-
+//
 //        Set<BluetoothDevice> pairedDevices = BTAdapter.getBondedDevices();
 //
 //        if (pairedDevices.size() > 0) {
-//            // There are paired devices. Get the name and address of each paired device.
+//            // There are showDevices devices. Get the name and address of each showDevices device.
 //            for (BluetoothDevice device : pairedDevices) {
 //                String deviceName = device.getName();
 //                String deviceHardwareAddress = device.getAddress(); // MAC address
@@ -129,12 +128,11 @@ public class ListActivity extends AppCompatActivity {
         // set discoverable if necessary
 
 
-        mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        adapter = new AdapterClass(getApplicationContext(), itemslist);
-        recyclerview.setLayoutManager(mLayoutManager);
-        recyclerview.setAdapter(adapter);
+//        mLayoutManager = new LinearLayoutManager(getApplicationContext());
+//        adapter = new AdapterClass(getApplicationContext(), itemslist);
+//        recyclerview.setLayoutManager(mLayoutManager);
+//        recyclerview.setAdapter(adapter);
     }
-
 
 
 
@@ -201,14 +199,14 @@ public class ListActivity extends AppCompatActivity {
                 break;
             }
             case R.id.action_help: {
-                startActivity(new Intent(getApplicationContext(),help.class));
+                startActivity(new Intent(getApplicationContext(), help.class));
                 break;
             }
             case R.id.action_privacy: {
                 break;
             }
             case R.id.action_ourApps: {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Sigmax+Applications")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Sigmax+Applications")));
                 break;
             }
         }
@@ -351,7 +349,7 @@ public class ListActivity extends AppCompatActivity {
         dataModel = new DataModel(device.getName(), device.getAddress(), rssi + "dBm");
         itemslist.add(dataModel);
         adapter.notifyDataSetChanged();
-        Snackbar.make(recyclerview, "New Device Found " , Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(recyclerview, "New Device Found ", Snackbar.LENGTH_SHORT).show();
 
     }
 

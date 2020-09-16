@@ -8,6 +8,7 @@
     tools:context="signalstrengthmeter.MainActivity">
 
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -121,9 +122,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
+        android:id="@+id/Home_CardView"
+        android:onClick="Home_CardView"
         app:cardCornerRadius="5dp"
         app:cardElevation="30dp"
-        android:onClick="Home_CardView"
         app:layout_constraintBottom_toTopOf="@id/row1bottomgl"
         app:layout_constraintLeft_toRightOf="@id/leftmostgl"
         app:layout_constraintRight_toRightOf="@id/center1gl"
@@ -735,7 +737,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.40" />
+                app:layout_constraintGuide_begin="59dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/titlebottomgl"
@@ -898,6 +900,7 @@
                 app:layout_constraintLeft_toLeftOf="@id/iconrightgl"
                 app:layout_constraintRight_toLeftOf="@id/iconendgl"
                 app:layout_constraintTop_toBottomOf="@id/progress_barbottomgl" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1301,6 +1304,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottommostgl"
@@ -1312,12 +1316,12 @@
             android:id="@+id/btnAddBluetooth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_gravity="top|end"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="0dp"
-            android:onClick="AddNew"
             android:backgroundTint="#4AAAF6"
             android:elevation="6dp"
+            android:onClick="AddNew"
             android:src="@drawable/ic_add" />
 
         <com.google.android.gms.ads.AdView
@@ -1337,7 +1341,13 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
-
+    <ListView
+        android:layout_width="217dp"
+        android:layout_height="91dp"
+        android:id="@+id/deviceList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/my_toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

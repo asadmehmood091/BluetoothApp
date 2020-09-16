@@ -82,16 +82,16 @@
             android:layout_marginLeft="80dp"
             android:text="Powered by"
             android:textColor="#FFFFFF"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="28sp"
-            android:text="Sigmax Applications"
-            android:padding="20dp"
+            android:textSize="24sp"
+            android:text="NEPTUNE TECHNOLOGIES"
+            android:padding="16dp"
             android:textStyle="bold"
             android:textAlignment="center"
             android:layout_marginRight="20dp"

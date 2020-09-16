@@ -2,8 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="55dp"
     android:layout_margin="10dp"
+    android:id="@+id/add_devices"
     android:background="@drawable/background_style3">
 
     <androidx.constraintlayout.widget.Guideline
@@ -11,49 +12,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.03" />
+        app:layout_constraintGuide_percent="0.01" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/item_right_gl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.97" />
+        app:layout_constraintGuide_percent="0.99" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/item_top_gl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.03" />
+        app:layout_constraintGuide_percent="0.01" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/item_bottom_gl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.97" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/item_center_gl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.47" />
+        app:layout_constraintGuide_percent="0.99" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/item_first_gl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.49" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/item_second_gl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
 
 
     <TextView
@@ -63,39 +52,12 @@
         android:gravity="center"
         android:text="Name"
         android:textColor="#1697FE"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/item_center_gl"
         app:layout_constraintLeft_toRightOf="@id/item_left_gl"
         app:layout_constraintRight_toRightOf="@id/item_first_gl"
         app:layout_constraintTop_toBottomOf="@id/item_top_gl" />
-
-    <TextView
-        android:id="@+id/signal"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="dBm"
-        android:textColor="#0565B2"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@id/item_center_gl"
-        app:layout_constraintLeft_toRightOf="@id/item_first_gl"
-        app:layout_constraintRight_toRightOf="@id/item_second_gl"
-        app:layout_constraintTop_toBottomOf="@id/item_top_gl" />
-
-    <Button
-        android:id="@+id/AddToMain"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/ic_add"
-        android:gravity="center"
-        android:onClick="AddToHome"
-        android:backgroundTint="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@id/item_center_gl"
-        app:layout_constraintLeft_toRightOf="@id/item_second_gl"
-        app:layout_constraintRight_toRightOf="@id/item_right_gl"
-        app:layout_constraintTop_toBottomOf="@id/item_top_gl" />
-
 
     <TextView
         android:id="@+id/deviceMac"
@@ -104,40 +66,13 @@
         android:gravity="center"
         android:text="Mac Address"
         android:textColor="#403B40"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/item_bottom_gl"
-        app:layout_constraintLeft_toRightOf="@id/item_left_gl"
-        app:layout_constraintRight_toRightOf="@id/item_first_gl"
-        app:layout_constraintTop_toBottomOf="@id/item_center_gl" />
-
-
-    <ProgressBar
-        android:id="@+id/progress"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/progress_grad_bg"
-        android:max="-30"
-        android:min="-90"
-        android:progress="100"
-        android:progressDrawable="@drawable/progress_grad_bg"
-        app:layout_constraintBottom_toTopOf="@id/item_bottom_gl"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/item_center_gl"
         app:layout_constraintLeft_toRightOf="@id/item_first_gl"
-        app:layout_constraintRight_toRightOf="@id/item_second_gl"
-        app:layout_constraintTop_toBottomOf="@id/item_center_gl" />
-
-
-    <TextView
-        android:id="@+id/percent"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="100%"
-        android:textColor="#403B40"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@id/item_bottom_gl"
-        app:layout_constraintLeft_toRightOf="@id/item_second_gl"
         app:layout_constraintRight_toRightOf="@id/item_right_gl"
-        app:layout_constraintTop_toBottomOf="@id/item_center_gl" />
+        app:layout_constraintTop_toBottomOf="@id/item_top_gl" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

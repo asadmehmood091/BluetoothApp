@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_leftmostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_rightmostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_topmostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_bottommostgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_first_leftgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_firstgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_secondgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_thirdgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.59" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/custom_fourthgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <ImageView
+        android:id="@+id/custom_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toTopOf="@id/custom_firstgl"
+        app:layout_constraintLeft_toLeftOf="@id/custom_leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_topmostgl" />
+
+
+    <TextView
+        android:id="@+id/custom_home_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="HOME"
+        android:textColor="#F6A2A2"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/custom_firstgl"
+        app:layout_constraintLeft_toLeftOf="@id/custom_first_leftgl"
+        app:layout_constraintRight_toRightOf="@id/custom_rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_topmostgl" />
+
+
+    <ImageView
+        android:id="@+id/custom_car"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/car"
+        app:layout_constraintBottom_toTopOf="@id/custom_secondgl"
+        app:layout_constraintLeft_toLeftOf="@id/custom_leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_firstgl" />
+
+    <TextView
+        android:id="@+id/custom_car_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="CAR"
+        android:textColor="#F6A2A2"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/custom_secondgl"
+        app:layout_constraintLeft_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintRight_toRightOf="@id/custom_rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_firstgl" />
+
+
+    <ImageView
+        android:id="@+id/custom_earphone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/earphone"
+        app:layout_constraintBottom_toTopOf="@id/custom_thirdgl"
+        app:layout_constraintLeft_toLeftOf="@id/custom_leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_secondgl" />
+
+
+    <TextView
+        android:id="@+id/custom_earphone_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="EARPHONE"
+        android:textColor="#F6A2A2"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/custom_thirdgl"
+        app:layout_constraintLeft_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintRight_toRightOf="@id/custom_rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_secondgl" />
+
+    <ImageView
+        android:id="@+id/custom_desktop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/desktop"
+        app:layout_constraintBottom_toTopOf="@id/custom_fourthgl"
+        app:layout_constraintLeft_toLeftOf="@id/custom_leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_thirdgl" />
+
+
+    <TextView
+        android:id="@+id/custom_desktop_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="COMPUTER"
+        android:textColor="#F6A2A2"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/custom_fourthgl"
+        app:layout_constraintLeft_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintRight_toRightOf="@id/custom_rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_thirdgl" />
+
+    <ImageView
+        android:id="@+id/custom_custom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toTopOf="@id/custom_bottommostgl"
+        app:layout_constraintLeft_toLeftOf="@id/custom_leftmostgl"
+        app:layout_constraintRight_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_fourthgl" />
+
+
+    <TextView
+        android:id="@+id/custom_custom_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="ADD TO MAIN"
+        android:textColor="#F6A2A2"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/custom_bottommostgl"
+        app:layout_constraintLeft_toRightOf="@id/custom_first_leftgl"
+        app:layout_constraintRight_toRightOf="@id/custom_rightmostgl"
+        app:layout_constraintTop_toBottomOf="@id/custom_fourthgl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
